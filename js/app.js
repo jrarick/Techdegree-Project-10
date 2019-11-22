@@ -39,7 +39,8 @@ $.ajax({
       let email = employee[targetIndex].email;
       let city = employee[targetIndex].location.city;
       let phone = employee[targetIndex].phone;
-      let address = employee[targetIndex].location.street + ", " +
+      let address = employee[targetIndex].location.street.number + " " +
+                    employee[targetIndex].location.street.name + ", " +
                     employee[targetIndex].location.state + " " +
                     employee[targetIndex].location.postcode;
       let birthday = "Birthday: " + new Date(employee[targetIndex].dob.date).toLocaleDateString("en-US");
